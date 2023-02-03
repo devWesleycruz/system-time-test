@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hourtest</title>
+
+    <style>
+        * {
+            margin: 0px;
+            border: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #F0D37A;
+        }
+
+        header {
+            margin-bottom: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: large;
+            color: white;
+        }
+
+        div {
+            width: 500px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.4em;
+        }
+
+        span#img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+          
+            
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Teste hora do dia</h1>
+    </header>
+    <main>
+        <div>
+            <p id="hour-info"></p>
+            <span id="img"></span>
+        </div>
+    </main>
+
+    <script>
+        var hour = 20
+        var boxresult = document.querySelector('p#hour-info')
+        var imgi= document.querySelector('span#img')
+
+        if (hour >= 5 && hour < 12) {
+            boxresult.innerHTML = `Agora são ${hour} horas manha`
+
+            imgi.style.background = 'url(https://i0.wp.com/nerdizmo.uai.com.br/wp-content/uploads/sites/29/2014/11/morning.jpg?ssl=1)'
+           
+        }
+
+        else if (hour > 12 && hour < 19) {
+            boxresult.innerHTML = `Agora são ${hour} horas`
+            document.body.style.background = '#F27975'
+
+            imgi.style.background = 'url(https://cdn.pixabay.com/photo/2016/09/23/04/17/sunset-1688849__340.jpg)'
+
+
+        } else {
+            boxresult.innerHTML = `Agora são ${hour} horas`
+            document.body.style.background = '#18327B'
+            imgi.style.background = 'url(https://img.freepik.com/fotos-premium/noite-na-praia-com-barco-e-luar_104785-846.jpg)'
+        }
+
+        
+    </script>
+</body>
+</html>
